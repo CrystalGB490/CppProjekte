@@ -1,65 +1,132 @@
-# Mini-Bank
+# 1. C++ Mini-Bank CLI (Bank.cpp)
 
-## Bankkonto mit Gold hinzufügen / adding gold in the bank account
+A simple, interactive command-line banking simulation written in C++ that lets users manage a virtual gold balance.
 
-<img width="244" height="120" alt="Screenshot 2026-10-12 151815" src="https://github.com/user-attachments/assets/7f1da1f3-74b6-4013-8206-e7efe87b9964" />
+## Features
 
-Um Ihrem fiktiven Konto Gold hinzuzufügen, müssen Sie die „1“ drücken und dann die Eingabetaste betätigen.
+- **Starting Balance:** Begins with an initial balance of `100 Gold`.
+- **Deposit & Withdraw:** Easily add gold to your account or withdraw funds.
+- **Overdraft Protection:** Prevents withdrawals that exceed your current gold balance.
+- **Input Validation:** Handles non-numeric menu inputs safely without crashing or causing infinite loops.
+- **Interactive Menu Loop:** Continues running until you choose to exit (`3`).
 
-(To add gold to your virtual account, you must press "1" and then the Enter key.)
+## Prerequisites
+
+To compile and run this project, you need a standard C++ compiler, such as:
+
+- `g++` (GCC)
+- `clang++`
+- MSVC (Visual Studio)
+
+## Compilation & Usage
+
+1. **Clone the repository** (or save the code as `minibank.cpp`):
+   ```bash
+   git clone https://github.com
+   cd your-repo-name
+   ```
+
+2. **Compile the program:**
+   ```bash
+   g++ minibank.cpp -o minibank
+   ```
+
+3. **Run the Mini-Bank:**
+   - **Linux / macOS:**
+     ```bash
+     ./minibank
+     ```
+   - **Windows:**
+     ```cmd
+     minibank.exe
+     ```
+
+##  Example Session
+
+```text
+--- Welcome to the Mini-Bank ---
+
+Balance: 100 Gold
+1. Deposit Gold
+2. Withdraw Gold
+3. Exit
+Choose an option: 1
+Enter deposit amount: 490
+
+Balance: 590 Gold
+1. Deposit Gold
+2. Withdraw Gold
+3. Exit
+Choose an option: 2
+Enter withdrawal amount: 600
+Not enough Gold!
+
+Balance: 590 Gold
+1. Deposit Gold
+2. Withdraw Gold
+3. Exit
+Choose an option: 3
+Goodbye!
+```
 
 
-<img width="292" height="145" alt="Screenshot 2026-10-12 151851" src="https://github.com/user-attachments/assets/21ab69f8-6bf7-452b-9376-ddfbe3a53d13" />
+# 2. C++ CLI Calculator (Calculator.cpp)
 
+A lightweight, interactive command-line calculator written in C++ featuring basic arithmetic operations, result memory, input validation (and a bit of sass).
 
-Hier können Sie eine beliebige Zahl nutzen, z.b, 490. Bestätigen Sie dann die Eingabetaste.
+## Features
 
-(You can use any number here, e.g., 490. Then press the Enter key.)
+- **Basic Arithmetic:** Supports Addition (`+`), Subtraction (`-`), Multiplication (`*`), and Division (`/`).
+- **Previous Result Memory:** Type `answer` as your first number to reuse the result from your previous calculation.
+- **Error Handling & Input Validation:** 
+  - Prevents crashes when non-numeric characters are entered.
+  - Protects against division by zero.
+- **Interactive Loop:** Keeps running until you explicitly decide to quit (`q`).
 
-<img width="176" height="100" alt="Screenshot 2026-10-12 152651" src="https://github.com/user-attachments/assets/99a6e445-127a-411f-a7e2-5912f266dc0b" />
+## Prerequisites
 
-Hier ist das Endergebnis: Sie haben jetzt 590 Gold auf Ihrem fiktiven Konto.
+To compile and run this project, you need a C++ compiler supporting **C++11** or higher (due to `std::stod`), such as:
 
-(Here is the final result: You now have 590 gold in your virtual account.)
+- `g++` (GCC)
+- `clang++`
+- MSVC (Visual Studio)
 
-## Gold vom Bankkonto abheben / withdrawing gold from the bank account
+## Compilation & Usage
 
-<img width="199" height="98" alt="Screenshot 2026-10-12 152724" src="https://github.com/user-attachments/assets/49edb1d8-ef33-48b2-b3d1-46afacf87d8f" />
+1. **Clone the repository** (or save the code as `calculator.cpp`):
+   ```bash
+   git clone https://github.com
+   cd your-repo-name
+   ```
 
-Um Ihrem fiktiven Konto Gold abzuheben, müssen Sie die „2“ drücken und dann die Eingabetaste betätigen.
+2. **Compile the program:**
+   ```bash
+   g++ -std=c++11 calculator.cpp -o calculator
+   ```
 
-(To withdraw gold from your virtual account, you must press "2" and then the Enter key.)
+3. **Run the calculator:**
+   - **Linux / macOS:**
+     ```bash
+     ./calculator
+     ```
+   - **Windows:**
+     ```cmd
+     calculator.exe
+     ```
 
-<img width="229" height="127" alt="Screenshot 2026-10-12 153108" src="https://github.com/user-attachments/assets/3178d1d8-4076-4835-9021-400ef73b089c" />
+## Example Session
 
-Sie können nicht mehr Gold abheben, als Sie auf Ihrem fiktiven Konto haben – zum Beispiel 260 Gold entnehmen, wenn sich nur 100 Gold auf dem Konto befinden.
+```text
+What do you want to do? ( + (addition), - (subtraction), * (multiplication), / (division), q (quit)): +
+Enter your first number (or type 'answer' to use the previous result): 10
+Enter your second number: 5
+The total of 10 and 5 is: 15
 
-(You cannot withdraw more gold than you have in your virtual account — for example, withdrawing 260 gold when there is only 100 gold in the account.)
+What do you want to do? ( + (addition), - (subtraction), * (multiplication), / (division), q (quit)): *
+Enter your first number (or type 'answer' to use the previous result): answer
+Enter your second number for multiplication: 2
+The total of 15 and 2 is: 30
 
-<img width="212" height="116" alt="Screenshot 2026-10-12 153141" src="https://github.com/user-attachments/assets/cea57b2f-dc60-4eea-bea2-29f90fc3ad7f" />
-
-Alternativ können Sie einen beliebigen Goldbetrag unter 100 abheben – zum Beispiel 50 Gold. Bestätigen Sie anschließend durch Drücken der Eingabetaste.
-
-(Alternatively, you can withdraw any amount of gold under 100 — for example, 50 gold. Then confirm by pressing the Enter key.)
-
-
-<img width="171" height="102" alt="Screenshot 2026-10-12 153153" src="https://github.com/user-attachments/assets/7a3d5206-babb-4847-b91b-1075df7b1b6e" />
-
-Das Endergebnis: Sie haben erfolgreich Gold von Ihrem fiktiven Konto abgehoben.
-
-(The result: You successfully withdraw gold from your virtual account) 
-
-## Programm verlassen / closing the program
-
-<img width="171" height="102" alt="Screenshot 2026-10-12 153153" src="https://github.com/user-attachments/assets/a6a84f04-1001-491a-ab02-30c3f8f9cee1" />
-
-Sobald Sie Ihrem fiktiven Konto Gold hinzugefügt haben (oder es abgehoben haben, wie auf dem Bild über diesem Text zu sehen ist), drücken Sie die Taste „3“ und anschließend die Eingabetaste.
-
-(Once you have added gold to your virtual account (or withdrawn it, as shown in the image above this text), press the "3" key and then the Enter key.)
-
-<img width="156" height="103" alt="Screenshot 2026-10-12 153232" src="https://github.com/user-attachments/assets/74354bd0-aa07-41dd-97cf-e99e735450cb" />
-
-Sie haben das Programm erfolgreich beendet.
-
-(You have successfully closed the program.)
+What do you want to do? ( + (addition), - (subtraction), * (multiplication), / (division), q (quit)): q
+Okay, closing the calculator, you meanie...
 
