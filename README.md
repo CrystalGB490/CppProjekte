@@ -20,7 +20,7 @@ To compile and run this project, you need a standard C++ compiler, such as:
 
 ## Compilation & Usage
 
-1. **Clone the repository** (or save the code as `minibank.cpp`):
+1. **Clone the repository** (or save the code as `Bank.cpp`):
    ```bash
    git clone https://github.com
    cd your-repo-name
@@ -68,7 +68,8 @@ Balance: 590 Gold
 Choose an option: 3
 Goodbye!
 ```
-
+## Hours taken
+Around 3 Hours
 
 # 2. C++ CLI Calculator (Calculator.cpp)
 
@@ -93,7 +94,7 @@ To compile and run this project, you need a C++ compiler supporting **C++11** or
 
 ## Compilation & Usage
 
-1. **Clone the repository** (or save the code as `calculator.cpp`):
+1. **Clone the repository** (or save the code as `Calculator.cpp`):
    ```bash
    git clone https://github.com
    cd your-repo-name
@@ -145,3 +146,5 @@ Enter your first number (or type 'answer' to use the previous result): 5
 Enter your second number: Gameboy
 Letters arent numbers, genius...
 ```
+## Hours taken
+Around 5-6 hours
