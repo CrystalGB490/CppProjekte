@@ -129,4 +129,19 @@ The total of 15 and 2 is: 30
 
 What do you want to do? ( + (addition), - (subtraction), * (multiplication), / (division), q (quit)): q
 Okay, closing the calculator, you meanie...
+```
 
+## Example Session with errors message
+```
+What do you want to do? ( + (addition), - (subtraction), * (multiplication), / (division), q (quit)): No
+Choose a valid operation and not whatever you tried to do...
+
+What do you want to do? ( + (addition), - (subtraction), * (multiplication), / (division), q (quit)): /
+Enter your first number (or type 'answer' to use the previous result): 5
+Enter your second number for division: 0
+you cant divide it by zero unless you want to create a singularity.
+
+Enter your first number (or type 'answer' to use the previous result): 5
+Enter your second number: Gameboy
+Letters arent numbers, genius...
+```
